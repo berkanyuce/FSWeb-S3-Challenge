@@ -65,6 +65,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color: rgb(225, 239, 230);
 }
 
 h1 {
@@ -92,6 +93,29 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 }
+.header-background {
+    background-color: rgb(0, 4, 17, .8);
+    height: 29vh;
+    opacity: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.header-navigation {
+    display: flex;
+    justify-content: space-around;
+    
+}
+.header-social-media-nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
 
 /* spacers */
 .spacer {
@@ -111,6 +135,10 @@ header {
     height: 100vh;
     text-align: center;
     background-color: rgb(0, 4, 17);
+}
+.gallery img {
+    padding: 1.5%;
+
 }
 
 /* about us section */
@@ -194,16 +222,55 @@ footer {
     height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: black;
+}
+.footer-text {
+    display: flex;
+    justify-content: space-around;
+}
+.footer-nav {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-copyright-background {
+    background-color: black;
+    text-align: right;
+}
+.footer-copyright {
+    font-size: medium;
+    margin-right: 5%;
+}
+.email-signup input, button {
+    padding: 5%;
 }
 
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
-    
+    .header-background {
+        height: 60vh;
+    }
+    .header-background h1 {
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 4rem;
+    }
+    .header-navigation {
+        display: flex;
+        flex-direction: column;
+    }
 
     /* gallery section */
     .gallery {
         height: auto;
+    }
+    .gallery h2{
+        padding: 5% 0 5% 0;
+    }
+    .gallery img {
+        padding: 1.5% 0 1.5% 0;
     }
     
     /* about us section */
@@ -244,10 +311,35 @@ footer {
         padding-bottom: 2.5vh;
     }
 
+    
     /* footer section */
     footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+    .email-signup {
+        width: 100%;
+    }
+    .email-signup > input, button {
+        width: 80%;
+        padding: 1% 5% 1% 5%;
+    }
+    .footer-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    .footer-copyright-background {
+        text-align: center;
     }
 }
